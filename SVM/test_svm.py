@@ -15,9 +15,9 @@ import matplotlib.pyplot as plt
 def display_result():
     pass
 
-def handler(*, num_samples=10, num_features=2, grid_size=20, filename="svm.pdf"):
-    svm = SVM()
-    svm.fit(num_samples, num_features, grid_size, filename)
+def handler(*, kernel="linear", num_samples=10, num_features=2):
+    svm = SVM(kernel)
+    svm.fit(num_samples, num_features)
 
     display_result()
 
